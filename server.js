@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use('/', createResultRoute);
+app.get('/',(req,res)=>{
+    res.send('App Running')
+})
 
 const CONNECTION_URL = 'mongodb+srv://Ragul:dN6mgVfqQtty6Glw@cluster0.0eh4p.mongodb.net/?retryWrites=true&w=majority';
 
